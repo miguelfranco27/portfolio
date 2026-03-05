@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miguel Franco | Product Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        .modal-fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0a0a0a;
+            z-index: 9999;
+            display: none;
+            overflow-y: auto;
+            color: white;
+            padding: 60px 5%;
+        }
+
+        .modal-fullscreen.active { display: block; }
+
+        .close-modal-btn {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 50px;
+            font-weight: 300;
+            cursor: pointer;
+            z-index: 10000;
+            line-height: 1;
+        }
+
+        .modal-body-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        body.no-scroll { overflow: hidden; }
+    </style>
+</head>
+
+<body>
+
+ <div id="projectModal" class="modal-fullscreen">
+    <button class="close-modal-btn" onclick="fecharProjeto()">&times;</button>
+    <div class="modal-body-content" id="modalContent"></div>
+ </div>
+
+ <nav class="navbar">
+    <div class="logo">mf<span>.</span></div>
+
+    <!-- MENU HAMBURGUER -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#">Início</a></li>
+        <li><a href="#work">Meu trabalho</a></li>
+        <li><a href="#resume">Currículo</a></li>
+        <li><a href="#contact">Vamos conversar!</a></li>
+    </ul>
+ </nav>
+
+    <main class="container">
+        <section class="hero reveal">
+            <div class="hero-left">
+                <p class="tagline">Gosto de encontrar eficiência em meio à complexidade.</p>
+                <h1 class="name">miguel franco<span>.</span></h1>
+                <div class="job-container">
+                    <span class="badge">Web Designer</span>
+                    <span class="doodle-and">& desenvolvedor</span>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="hand-doodle">
+                    <img src="img/video.mp4" alt="Mão acenando">
+                </div>
+                <div class="quick-contact">
+                    <p>Vamos conversar!</p>
+                    <div class="email-box">Francomiguel79a@gmail.com</div>
+                </div>
+            </div>
+
+            <div class="scroll-wrapper">
+                <a href="#work" class="scroll-link">
+                    <span>Scroll down!</span>
+                    <div class="arrow-container">
+                        <i data-lucide="arrow-down" class="flecha"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="work" class="work-section">
+            <h2 class="work-title reveal">PROJETOS</h2>
+
+            <div class="project-card reveal">
+                <div class="project-text">
+                    <h3>Projeto desenvolvido para cliente de um site elegante  de serviços esteticos ,<span class="highlight-yellow"> design moderno e efeciente feito de maneira organica
+
+                    </span>.</h3>
+                    <p class="project-sub">Mobile Empresas APAP</p>
+                    <a href="javascript:void(0)" class="btn-project" style="--current-accent: #c3b49c;" onclick="abrirProjeto('projeto1')">
+                        <span>Ver projeto</span>
+                        <span class="underline"></span>
+                    </a>
+                </div>
+                <div class="project-visual" onclick="abrirProjeto('projeto1')">
+                    <img src="img/img.png" alt="Projeto 1">
+                    <div class="project-overlay">
+                        <span class="btn-veja-mais">Veja mais</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card reverse reveal">
+                <div class="project-text">
+                    <h3>Projeto desnevolvido para serrsalheria com foco e modenridade ee efeciencia <span class="highlight-purple">, laudantium quaerat iste corrupti dolorum ab voluptatem quas accusamus mollitia eum, repellendus, cum officiis explicabo illo?</span> para os clientes.</h3>
+                    <p class="project-sub">Data Annotation Platform</p>
+                    <a href="javascript:void(0)" class="btn-project" style="--current-accent: #ffffff;" onclick="abrirProjeto('projeto2')">
+                        <span>Ver projeto</span>
+                        <span class="underline"></span>
+                    </a>
+                </div>
+                <div class="project-visual" onclick="abrirProjeto('projeto2')">
+                    <img src="img/image.png" alt="Projeto 2">
+                    <div class="project-overlay">
+                        <span class="btn-veja-mais">Veja mais</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-text">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sit esse repudiandae qui  <span class="highlight-green">, laudantium quaerat iste corrupti dolorum </span>lorem spmis.</h3>
+                    <p class="project-sub">Crecer Mobile</p>
+                    <a href="javascript:void(0)" class="btn-project" style="--current-accent: #00ffa3;" onclick="abrirProjeto('projeto3')">
+                        <span>Ver projeto</span>
+                        <span class="underline"></span>
+                    </a>
+                </div>
+                <div class="project-visual" onclick="abrirProjeto('projeto3')">
+                    <img src="img/Apresentaçaosite.jpg" alt="Projeto 3">
+                    <div class="project-overlay">
+                        <span class="btn-veja-mais">Veja mais</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card reverse reveal">
+                <div class="project-text">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="highlight-orange">insurtech americana</span>,orem ipsum dolor sit amet consectetur adipisicing elit..</h3>
+                    <p class="project-sub">Insurtech Platform</p>
+                    <a href="javascript:void(0)" class="btn-project" style="--current-accent: #dab892;" onclick="abrirProjeto('projeto4')">
+                        <span>Ver projeto</span>
+                        <span class="underline"></span>
+                    </a>
+                </div>
+                <div class="project-visual" onclick="abrirProjeto('projeto4')">
+                    <img src="img/Apresentaçaosite.jpg" alt="Projeto 4">
+                    <div class="project-overlay">
+                        <span class="btn-veja-mais">Veja mais</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="proof-section reveal">
+            <h2 class="proof-title">Ferramentas</h2>
+            <div class="proof-grid">
+                <div class="proof-card">
+                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=js" alt="JS"></div>
+                    <div class="proof-info"><h4>JavaScript</h4></div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=html" alt="HTML"></div>
+                    <div class="proof-info"><h4>HTML</h4></div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=css" alt="CSS"></div>
+                    <div class="proof-info"><h4>CSS</h4></div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=figma" alt="Figma"></div>
+                    <div class="proof-info"><h4>Figma</h4></div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=ps" alt="Photoshop"></div>
+                    <div class="proof-info"><h4>Photoshop</h4></div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=ai" alt="Illustrator"></div>
+                    <div class="proof-info"><h4>Illustrator</h4></div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"></div>
+                    <div class="proof-info"><h4>GitHub</h4></div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=bootstrap" alt="Bootstrap"></div>
+                    <div class="proof-info"><h4>Bootstrap</h4></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume" class="resume-section container reveal">
+            <h2>Experiência </h2>
+
+            <div class="resume-card">
+                <div class="profile-header">
+                    <div class="profile-info">
+                        <img src="img/eu.jpg" alt="Miguel Franco" class="profile-pic">
+                        <div class="profile-text">
+                            <h3>Miguel Franco</h3>
+                            <p>Web Designer — Brasil</p>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        Francomiguel79a@gmail.com<br>
+                        +55 (11) 968504974
+                    </div>
+                </div>
+                
+                <span class="resume-label">Perfil</span>
+                <ul class="resume-list">
+                    <li>3+ anos de experiência desenhando interfaces e desenvolvendo.</li>
+                    <li>Especializado em Análise e Desenvolvimento de Sistemas e UX/UI Design</em>.</li>
+                    <li>Designer focado em resultados e experiência do usuário.</li>
+                </ul>
+            </div>
+
+            <div class="resume-card">
+                <div class="exp-header">
+                    <div class="company-box">
+                        <div class="company-logo">W</div>
+                        <div class="role-info">
+                            <h4>Analista de Sistemas</h4>
+                            <p>Celanese</p>
+                        </div>
+                    </div>
+                    <div class="exp-date">
+                         2024 — 2025<br>
+                         Brasil, SP
+                    </div>
+                </div>
+
+                <div class="sub-project">
+                    <h5>Desenvolvimento</h5>
+                    <ul class="resume-list">
+                        <li>Trabalhei como analista de sistemas na Celanese.</li>
+                        <li>Administrando sistemas internos e lidando com ambiente corporativo.</li>
+                        <li>Atuação em desenvolvimento e análise de dados.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="resume-card">
+                <div class="exp-header">
+                    <div class="company-box">
+                        <div class="company-logo">W</div>
+                        <div class="role-info">
+                            <h4>Freelancer e Projetista</h4>
+                            <p>Autônomo</p>
+                        </div>
+                    </div>
+                    <div class="exp-date">
+                         2022 — 2026<br>
+                         Brasil, SP
+                    </div>
+                </div>
+
+                <div class="sub-project">
+                    <h5>Design e Desenvolvimento</h5>
+                    <ul class="resume-list">
+                        <li>Atuação no desenvolvimento de sistemas e identidades personalizados para clientes.</li>
+                        <li>Focado na criação de soluções eficientes e análise de requisitos.</li>
+                        <li>Desenvolvimento de interfaces e identidades visuais.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="resume-card">
+                <div class="exp-header">
+                    <div class="company-box">
+                        <div class="company-logo">W</div>
+                        <div class="role-info">
+                            <h4>Formação</h4>
+                            <p>Universidade de Mogi das Cruzes - UMC</p>
+                        </div>
+                    </div>
+                    <div class="exp-date">
+                         2022 — 2024<br>
+                         Brasil, SP
+                    </div>
+                </div>
+
+                <div class="sub-project">
+                    <h5>Análise e Desenvolvimento de Sistemas</h5>
+                    <ul class="resume-list">
+                        <li>Funcionamento de sistemas e arquitetura de software.</li>
+                        <li>Desenvolvimento de aplicações.</li>
+                        <li>Foco em Experiência do Usuário (UX).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section container reveal">
+            <h2>Outras Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-tag">Notion</div>
+                <div class="skill-tag">SharePoint</div>
+                <div class="skill-tag">Instagram</div>
+                <div class="skill-tag">Pacote Office</div>
+                <div class="skill-tag">WordPress</div>
+                <div class="skill-tag">Wix</div>
+                <div class="skill-tag">Excel</div>
+                <div class="skill-tag">Redes Sociais</div>
+                <div class="skill-tag">Adobe CC</div>
+                <div class="skill-tag">Framer</div>
+                <div class="skill-tag">SAP</div>
+                <div class="skill-tag">Krita</div>
+            </div>
+        </section>
+
+        <section class="others-section reveal">
+            <h2 class="others-title">OUTROS TRABALHOS</h2>
+            <div class="others-grid">
+                <div class="other-item"><div class="other-visual"><img src="img/vanp.png" alt=""></div></div>
+                <div class="other-item"><div class="other-visual"><img src="img/vanp.png" alt=""></div></div>
+                <div class="other-item"><div class="other-visual"><img src="img/Apresentaçaosite.jpg" alt=""></div></div>
+                <div class="other-item"><div class="other-visual"><img src="img/Apresentaçaosite.jpg" alt=""></div></div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section container reveal">
+            <div class="divider-line"></div>
+            <div class="contact-container">
+                <h2 class="contact-title">Vamos conversar!</h2>
+                <div class="contact-actions">
+                    <a href="mailto:Francomiguel79a@gmail.com" class="contact-button email">
+                        Francomiguel79a@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/miguel-franco-0a8492230" target="_blank" class="contact-button linkedin">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-left"><div class="logo">mf<span>.</span></div></div>
+            <div class="footer-right">
+                <div class="social-group">
+                    <span class="social-label">Social</span>
+                    <a href="https://www.linkedin.com/in/miguel-franco-0a8492230" class="social-link" target="_blank">LinkedIn</a>
+                    <a href="#" class="social-link">Behance</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom" style="text-align:center; padding-top:40px; opacity:0.3; font-size:12px;">
+            <p>&copy; 2026 Miguel Franco. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    entry.target.classList.remove('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const hiddenElements = document.querySelectorAll('.reveal');
+        hiddenElements.forEach((el) => observer.observe(el));
+
+        function abrirProjeto(id) {
+            const modal = document.getElementById('projectModal');
+            const content = document.getElementById('modalContent');
+            document.body.classList.add('no-scroll');
+            
+            const projetos = {
+                'projeto1': '<h1>Projeto 1</h1><p>Detalhes do App Bancário Empresarial...</p>',
+                'projeto2': '<h1>Projeto 2</h1><p>Detalhes da Serralheria Dinâmica...</p>',
+                'projeto3': '<h1>Projeto 3</h1><p>Detalhes do App de Seguros e Linguagem Visual...</p>',
+                'projeto4': '<h1>Projeto 4</h1><p>Detalhes da Insurtech Americana...</p>'
+            };
+
+            content.innerHTML = projetos[id] || '<h1>Em breve</h1>';
+            modal.classList.add('active');
+        }
+
+        function fecharProjeto() {
+            const modal = document.getElementById('projectModal');
+            modal.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+        }
+
+        function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+    </script>
+</body>
+</html>
