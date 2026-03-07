@@ -5,55 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miguel Franco | Product Designer</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+   
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <style>
-        .modal-fullscreen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #0a0a0a;
-            z-index: 9999;
-            display: none;
-            overflow-y: auto;
-            color: white;
-            padding: 60px 5%;
-        }
 
-        .modal-fullscreen.active { display: block; }
-
-        .close-modal-btn {
-            position: fixed;
-            top: 20px;
-            right: 30px;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 50px;
-            font-weight: 300;
-            cursor: pointer;
-            z-index: 10000;
-            line-height: 1;
-        }
-
-        .modal-body-content {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        body.no-scroll { overflow: hidden; }
-    </style>
 </head>
 
 <body>
 
- <div id="projectModal" class="modal-fullscreen">
-    <button class="close-modal-btn" onclick="fecharProjeto()">&times;</button>
-    <div class="modal-body-content" id="modalContent"></div>
- </div>
 
  <nav class="navbar">
     <div class="logo">mf<span>.</span></div>
@@ -85,9 +44,11 @@
             </div>
 
             <div class="hero-right">
-                <div class="hand-doodle">
-                    <img src="img/video.mp4" alt="Mão acenando">
-                </div>
+                           <div class="hand-doodle">
+    <video autoplay loop muted playsinline alt="Mão acenando">
+        <source src="img/video.mp4" type="video/mp4">
+      
+    </video>
                 <div class="quick-contact">
                     <p>Vamos conversar!</p>
                     <div class="email-box">Francomiguel79a@gmail.com</div>
@@ -104,117 +65,95 @@
             </div>
         </section>
 
-        <section id="work" class="work-section">
-            <h2 class="work-title reveal">PROJETOS</h2>
+      <section id="work" class="work-section">
+    <h2 class="work-title reveal">PROJETOS</h2>
 
-            <div class="project-card reveal">
-                <div class="project-text">
-                    <h3>Projeto desenvolvido para cliente de um site elegante  de serviços esteticos ,<span class="highlight-yellow"> design moderno e efeciente feito de maneira organica
+    <div class="project-card reveal">
+        <div class="project-text">
+            <h3>Desenvolvimento de interface para serviços de estética, unindo <span class="highlight-yellow">design moderno e navegação intuitiva.</span> </span></h3>
+            <p class="project-sub">Projeto Isabeuty</p>
+            <a href="pj1.html" class="btn-project" style="--current-accent: #c3b49c;">
+                <span>Ver projeto</span>
+                <span class="underline"></span>
+            </a>
+        </div>
+        <div class="project-visual">
+            <a href="pj1.html" style="text-decoration: none; color: inherit; display: block; height: 100%;">
+                <img src="img/pj1.jpg" alt="Projeto 1">
+                <div class="project-overlay">
+                    <span class="btn-veja-mais">Veja mais</span>
+                </div>
+            </a>
+        </div>
+    </div>
 
-                    </span>.</h3>
-                    <p class="project-sub">Mobile Empresas APAP</p>
-                    <a href="javascript:void(0)" class="btn-project" style="--current-accent: #c3b49c;" onclick="abrirProjeto('projeto1')">
-                        <span>Ver projeto</span>
-                        <span class="underline"></span>
-                    </a>
-                </div>
-                <div class="project-visual" onclick="abrirProjeto('projeto1')">
-                    <img src="img/img.png" alt="Projeto 1">
-                    <div class="project-overlay">
-                        <span class="btn-veja-mais">Veja mais</span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="project-card reverse reveal">
-                <div class="project-text">
-                    <h3>Projeto desnevolvido para serrsalheria com foco e modenridade ee efeciencia <span class="highlight-purple">, laudantium quaerat iste corrupti dolorum ab voluptatem quas accusamus mollitia eum, repellendus, cum officiis explicabo illo?</span> para os clientes.</h3>
-                    <p class="project-sub">Data Annotation Platform</p>
-                    <a href="javascript:void(0)" class="btn-project" style="--current-accent: #ffffff;" onclick="abrirProjeto('projeto2')">
-                        <span>Ver projeto</span>
-                        <span class="underline"></span>
-                    </a>
-                </div>
-                <div class="project-visual" onclick="abrirProjeto('projeto2')">
-                    <img src="img/image.png" alt="Projeto 2">
-                    <div class="project-overlay">
-                        <span class="btn-veja-mais">Veja mais</span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="project-card reveal">
-                <div class="project-text">
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sit esse repudiandae qui  <span class="highlight-green">, laudantium quaerat iste corrupti dolorum </span>lorem spmis.</h3>
-                    <p class="project-sub">Crecer Mobile</p>
-                    <a href="javascript:void(0)" class="btn-project" style="--current-accent: #00ffa3;" onclick="abrirProjeto('projeto3')">
-                        <span>Ver projeto</span>
-                        <span class="underline"></span>
-                    </a>
-                </div>
-                <div class="project-visual" onclick="abrirProjeto('projeto3')">
-                    <img src="img/Apresentaçaosite.jpg" alt="Projeto 3">
-                    <div class="project-overlay">
-                        <span class="btn-veja-mais">Veja mais</span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="project-card reverse reveal">
-                <div class="project-text">
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="highlight-orange">insurtech americana</span>,orem ipsum dolor sit amet consectetur adipisicing elit..</h3>
-                    <p class="project-sub">Insurtech Platform</p>
-                    <a href="javascript:void(0)" class="btn-project" style="--current-accent: #dab892;" onclick="abrirProjeto('projeto4')">
-                        <span>Ver projeto</span>
-                        <span class="underline"></span>
-                    </a>
-                </div>
-                <div class="project-visual" onclick="abrirProjeto('projeto4')">
-                    <img src="img/Apresentaçaosite.jpg" alt="Projeto 4">
-                    <div class="project-overlay">
-                        <span class="btn-veja-mais">Veja mais</span>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="proof-section reveal">
-            <h2 class="proof-title">Ferramentas</h2>
-            <div class="proof-grid">
-                <div class="proof-card">
-                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=js" alt="JS"></div>
-                    <div class="proof-info"><h4>JavaScript</h4></div>
+
+
+
+
+
+
+    <div class="project-card reverse reveal">
+        <div class="project-text">
+            <h3>Site desenvolvido para empresa de serralheria TMA, <span class="highlight-purple"> projetado com Interface moderna e eficiente. </span></h3>
+            <p class="project-sub">TMA serralheria </p>          
+            <a href="pj2.html" class="btn-project" style="--current-accent: #ffffff;">
+                <span>Ver projeto</span>
+                <span class="underline"></span>
+            </a>
+        </div>
+        <div class="project-visual">
+            <a href="pj2.html" style="text-decoration: none; color: inherit; display: block; height: 100%;">
+                <img src="img/pj2.jpg" alt="Projeto 2">
+                <div class="project-overlay">
+                    <span class="btn-veja-mais">Veja mais</span>
                 </div>
-                <div class="proof-card">
-                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=html" alt="HTML"></div>
-                    <div class="proof-info"><h4>HTML</h4></div>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="project-card reveal">
+        <div class="project-text">
+            <h3>projeto para futura construtora <span class="highlight-green">, site funcional com desing elegante </span></h3>
+            <p class="project-sub">VANP </p>
+            <a href="pj3.html" class="btn-project" style="--current-accent: #00ffa3;">
+                <span>Ver projeto</span>
+                <span class="underline"></span>
+            </a>
+        </div>
+        <div class="project-visual">
+            <a href="pj3.html" style="text-decoration: none; color: inherit; display: block; height: 100%;">
+                <img src="img/pj3.jpg" alt="Projeto 3">
+                <div class="project-overlay">
+                    <span class="btn-veja-mais">Veja mais</span>
                 </div>
-                <div class="proof-card">
-                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=css" alt="CSS"></div>
-                    <div class="proof-info"><h4>CSS</h4></div>
-                </div>
-                <div class="proof-card">
-                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=figma" alt="Figma"></div>
-                    <div class="proof-info"><h4>Figma</h4></div>
-                </div>
-                <div class="proof-card">
-                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=ps" alt="Photoshop"></div>
-                    <div class="proof-info"><h4>Photoshop</h4></div>
-                </div>
-                <div class="proof-card">
-                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=ai" alt="Illustrator"></div>
-                    <div class="proof-info"><h4>Illustrator</h4></div>
-                </div>
-                <div class="proof-card">
-                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"></div>
-                    <div class="proof-info"><h4>GitHub</h4></div>
-                </div>
-                <div class="proof-card">
-                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=bootstrap" alt="Bootstrap"></div>
-                    <div class="proof-info"><h4>Bootstrap</h4></div>
-                </div>
-            </div>
-        </section>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+ 
+</section>
 
         <section id="resume" class="resume-section container reveal">
             <h2>Experiência </h2>
@@ -318,6 +257,50 @@
             </div>
         </section>
 
+
+
+
+
+
+        
+        <section class="proof-section reveal">
+            <h2 class="proof-title">Ferramentas</h2>
+            <div class="proof-grid">
+                <div class="proof-card">
+                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=js" alt="JS"></div>
+                    <div class="proof-info"><h4>JavaScript</h4></div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=html" alt="HTML"></div>
+                    <div class="proof-info"><h4>HTML</h4></div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=css" alt="CSS"></div>
+                    <div class="proof-info"><h4>CSS</h4></div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=figma" alt="Figma"></div>
+                    <div class="proof-info"><h4>Figma</h4></div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=ps" alt="Photoshop"></div>
+                    <div class="proof-info"><h4>Photoshop</h4></div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=ai" alt="Illustrator"></div>
+                    <div class="proof-info"><h4>Illustrator</h4></div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"></div>
+                    <div class="proof-info"><h4>GitHub</h4></div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-icon-box"><img src="https://skillicons.dev/icons?i=bootstrap" alt="Bootstrap"></div>
+                    <div class="proof-info"><h4>Bootstrap</h4></div>
+                </div>
+            </div>
+        </section>
+
         <section class="skills-section container reveal">
             <h2>Outras Skills</h2>
             <div class="skills-grid">
@@ -336,15 +319,7 @@
             </div>
         </section>
 
-        <section class="others-section reveal">
-            <h2 class="others-title">OUTROS TRABALHOS</h2>
-            <div class="others-grid">
-                <div class="other-item"><div class="other-visual"><img src="img/vanp.png" alt=""></div></div>
-                <div class="other-item"><div class="other-visual"><img src="img/vanp.png" alt=""></div></div>
-                <div class="other-item"><div class="other-visual"><img src="img/Apresentaçaosite.jpg" alt=""></div></div>
-                <div class="other-item"><div class="other-visual"><img src="img/Apresentaçaosite.jpg" alt=""></div></div>
-            </div>
-        </section>
+     
 
         <section id="contact" class="contact-section container reveal">
             <div class="divider-line"></div>
@@ -395,27 +370,8 @@
         const hiddenElements = document.querySelectorAll('.reveal');
         hiddenElements.forEach((el) => observer.observe(el));
 
-        function abrirProjeto(id) {
-            const modal = document.getElementById('projectModal');
-            const content = document.getElementById('modalContent');
-            document.body.classList.add('no-scroll');
-            
-            const projetos = {
-                'projeto1': '<h1>Projeto 1</h1><p>Detalhes do App Bancário Empresarial...</p>',
-                'projeto2': '<h1>Projeto 2</h1><p>Detalhes da Serralheria Dinâmica...</p>',
-                'projeto3': '<h1>Projeto 3</h1><p>Detalhes do App de Seguros e Linguagem Visual...</p>',
-                'projeto4': '<h1>Projeto 4</h1><p>Detalhes da Insurtech Americana...</p>'
-            };
-
-            content.innerHTML = projetos[id] || '<h1>Em breve</h1>';
-            modal.classList.add('active');
-        }
-
-        function fecharProjeto() {
-            const modal = document.getElementById('projectModal');
-            modal.classList.remove('active');
-            document.body.classList.remove('no-scroll');
-        }
+    
+      
 
         function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("active");

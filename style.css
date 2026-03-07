@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 :root {
     --bg-color: #000000;
     --text-primary: #ffffff;
@@ -6,7 +10,50 @@
     --accent-purple: #8b5cf6;
     --accent-green: #22c55e;
     --accent-orange: #f97316;
-    --font-main: 'Inter', sans-serif;
+    
+    /* DEFINIÇÃO DAS FONTES */
+    --font-main: "Raleway", sans-serif;
+    --font-hero: "Raleway", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body { 
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    /* AQUI É ONDE A MÁGICA ACONTECE */
+    font-family: var(--font-main); 
+    overflow-x: hidden;
+}
+
+/* 3. EXCEÇÕES PARA O HERO (Para não quebrar seu design atual) */
+.hero, 
+.hero .name, 
+.hero .badge, 
+.hero .job-container,
+.nav-links a {
+    font-family: var(--font-hero) !important;
+    text-transform: none; /* A Goblin One é toda maiúscula, aqui removemos se necessário */
+}
+
+/* 4. AJUSTE DE LEGIBILIDADE PARA O CURRÍCULO (UX Design!) */
+/* A Goblin One é muito pesada para textos pequenos, use a Inter aqui */
+.resume-list li, 
+.profile-text p, 
+.contact-info, 
+.project-sub,
+.skill-tag {
+    font-family: var(--font-hero) !important;
+    letter-spacing: normal;
+}
+/* 3. Garante que o Hero permaneça com o design de impacto anterior */
+.hero, .hero .name, .hero .badge {
+    font-family: var(--font-hero) !important;
 }
 /* Configuração inicial dos elementos que vão animar */
 .reveal {
@@ -34,7 +81,7 @@
     scroll-behavior: smooth;
 }
 
-body {
+body { 
     background-color: var(--bg-color);
     color: var(--text-primary);
     font-family: var(--font-main);
@@ -565,6 +612,7 @@ body {
     justify-content: space-between; padding: 40px;
     gap: 80px;
     margin-bottom: 80px; border-radius: 20px;
+
     transition: transform 0.4s ease;
 }
 
@@ -587,8 +635,9 @@ body {
 
 .project-sub {
     font-size: 18px;
-    color: #888;
+    color: #726767;
     margin-bottom: 20px;
+ 
 }
 
 /* --- BOTÃO VER PROJETO COM COR DINÂMICA --- */
@@ -620,12 +669,12 @@ body {
 .project-visual {
     flex: 1.2;
     position: relative;
-    height: 350px;
+    height: 350px;  
     border-radius: 20px;
     overflow: hidden;
 }
 
-.project-visual img { width: 100%; height: 100%; object-fit: cover; }
+.project-visual img { width: 100%; height: auto; object-fit: cover; }
 
 .project-overlay {
     position: absolute;
@@ -652,9 +701,42 @@ body {
 
 .project-card:hover .btn-veja-mais { opacity: 1; transform: translateY(0); }
 
-/* CORES DE DESTAQUE */
-.highlight-yellow { color: #ceb6969b; }
-.highlight-purple { color: #d4a5ff; }
+/* CORES DE DESTAQUE          
+
+
+
+
+
+   <section class="others-section reveal">
+            <h2 class="others-title">OUTROS TRABALHOS</h2>
+            <div class="others-grid">
+                <div class="other-item"><div class="other-visual"><img src="img/vanp.png" alt=""></div></div>
+                <div class="other-item"><div class="other-visual"><img src="img/vanp.png" alt=""></div></div>
+                <div class="other-item"><div class="other-visual"><img src="img/Apresentaçaosite.jpg" alt=""></div></div>
+                <div class="other-item"><div class="other-visual"><img src="img/Apresentaçaosite.jpg" alt=""></div></div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+.highlight-yellow { color: #c07e58 }
+.highlight-purple { color: #da34f0; }
 .highlight-green  { color: #00ffa3; }
 .highlight-orange { color: #ff8a00; }
    /* tablet */
