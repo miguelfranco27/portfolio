@@ -486,7 +486,7 @@ body {
 }
 
 .logo { font-size: 24px; font-weight: 900; }
-.logo span {  color: #9c22c5; }
+.logo span {  color: #ff8a00; }
 .nav-links { display: flex; list-style: none; gap: 30px; }
 .nav-links a { 
     position: relative;
@@ -504,7 +504,7 @@ body {
     bottom: -4px;
     width: 0;
     height: 2px;
-    background: #9c22c5;;
+    background: #fbbf24;;
     transition: width 0.3s ease;
 }
 
@@ -529,7 +529,7 @@ body {
     text-transform: lowercase;
     margin: 20px 0;
 }
-.name span { color: #9c22c5; }
+.name span { color: #fbbf24; }
 
 .job-container {
     display: flex;
@@ -584,7 +584,7 @@ body {
     gap: 10px;
     transition: 0.3s;
 }
-.flecha{color:  #9c22c5; }
+.flecha{color:  #fbbf24; }
 .arrow-container { animation: bounce 2s infinite; }
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
