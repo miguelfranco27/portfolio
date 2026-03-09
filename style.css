@@ -928,6 +928,11 @@ body {
         padding: 40px 20px;
     }
 
+    html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative; 
+}
     .proof-title {
         
         font-size: 32px;

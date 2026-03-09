@@ -2,22 +2,18 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Miguel Franco | Product Designer</title>
     <link rel="stylesheet" href="style.css">
-   
+    
     <script src="https://unpkg.com/lucide@latest"></script>
-
-
 </head>
 
 <body>
 
-
  <nav class="navbar">
     <div class="logo">mf<span>.</span></div>
 
-    <!-- MENU HAMBURGUER -->
     <div class="hamburger" onclick="toggleMenu()">
         <span></span>
         <span></span>
@@ -44,11 +40,10 @@
             </div>
 
             <div class="hero-right">
-                           <div class="hand-doodle">
-    <video autoplay loop muted playsinline alt="Mão acenando">
-        <source src="img/video.mp4" type="video/mp4">
-      
-    </video>
+                <div class="hand-doodle">
+                    <video autoplay loop muted playsinline webkit-playsinline id="heroVideo">
+                        <source src="img/video.mp4" type="video/mp4">
+                    </video>
                 <div class="quick-contact">
                     <p>Vamos conversar!</p>
                     <div class="email-box">Francomiguel79a@gmail.com</div>
@@ -70,7 +65,7 @@
 
     <div class="project-card reveal">
         <div class="project-text">
-            <h3>Desenvolvimento de interface para serviços de estética, unindo <span class="highlight-yellow">design moderno e navegação intuitiva.</span> </span></h3>
+            <h3>Desenvolvimento de interface para serviços de estética, unindo <span class="highlight-yellow">design moderno e navegação intuitiva.</span> </h3>
             <p class="project-sub">Projeto Isabeuty</p>
             <a href="pj1.html" class="btn-project" style="--current-accent: #c3b49c;">
                 <span>Ver projeto</span>
@@ -86,16 +81,6 @@
             </a>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
 
     <div class="project-card reverse reveal">
         <div class="project-text">
@@ -116,16 +101,6 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
     <div class="project-card reveal">
         <div class="project-text">
             <h3>projeto para futura construtora <span class="highlight-green">, site funcional com desing elegante </span></h3>
@@ -144,15 +119,6 @@
             </a>
         </div>
     </div>
-
-
-
-
-
-
-
-
- 
 </section>
 
         <section id="resume" class="resume-section container reveal">
@@ -176,7 +142,7 @@
                 <span class="resume-label">Perfil</span>
                 <ul class="resume-list">
                     <li>3+ anos de experiência desenhando interfaces e desenvolvendo.</li>
-                    <li>Especializado em Análise e Desenvolvimento de Sistemas e UX/UI Design</em>.</li>
+                    <li>Especializado em Análise e Desenvolvimento de Sistemas e UX/UI Design.</li>
                     <li>Designer focado em resultados e experiência do usuário.</li>
                 </ul>
             </div>
@@ -257,12 +223,6 @@
             </div>
         </section>
 
-
-
-
-
-
-        
         <section class="proof-section reveal">
             <h2 class="proof-title">Ferramentas</h2>
             <div class="proof-grid">
@@ -319,8 +279,6 @@
             </div>
         </section>
 
-     
-
         <section id="contact" class="contact-section container reveal">
             <div class="divider-line"></div>
             <div class="contact-container">
@@ -370,12 +328,21 @@
         const hiddenElements = document.querySelectorAll('.reveal');
         hiddenElements.forEach((el) => observer.observe(el));
 
-    
-      
-
         function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
-}
+            document.getElementById("navLinks").classList.toggle("active");
+        }
+
+        // Script extra para garantir o play do vídeo em mobile (ignora restrições leves)
+        window.addEventListener('load', function() {
+            var video = document.getElementById('heroVideo');
+            if (video) {
+                video.play().catch(function(error) {
+                    console.log("Autoplay barrado, tentando novamente silencioso...");
+                    video.muted = true;
+                    video.play();
+                });
+            }
+        });
     </script>
 </body>
 </html>
