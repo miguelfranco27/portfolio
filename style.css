@@ -6,10 +6,10 @@
     --bg-color: #000000;
     --text-primary: #ffffff;
     --text-secondary: #a1a1aa;
-    --accent-yellow: #fbbf24;
-    --accent-purple: #8b5cf6;
-    --accent-green: #22c55e;
-    --accent-orange: #f97316;
+    --accent-yellow: #20b2c2;
+    --accent-purple: #20b2c2;
+    --accent-green: #20b2c2;
+    --accent-orange: #20b2c2;
     
     /* DEFINIÇÃO DAS FONTES */
     --font-main: "Raleway", sans-serif;
@@ -486,7 +486,7 @@ body {
 }
 
 .logo { font-size: 24px; font-weight: 900; }
-.logo span {  color: #ff8a00; }
+.logo span {  color: #20b2c2; }
 .nav-links { display: flex; list-style: none; gap: 30px; }
 .nav-links a { 
     position: relative;
@@ -504,7 +504,7 @@ body {
     bottom: -4px;
     width: 0;
     height: 2px;
-    background: #fbbf24;;
+    background: #20b2c2;;
     transition: width 0.3s ease;
 }
 
@@ -529,7 +529,7 @@ body {
     text-transform: lowercase;
     margin: 20px 0;
 }
-.name span { color: #fbbf24; }
+.name span { color: #20b2c2; }
 
 .job-container {
     display: flex;
@@ -540,6 +540,7 @@ body {
 .badge {
     background: #222;
     padding: 8px 16px;
+    color: #20b2c2;
     border-radius: 50px;
     font-weight: 600;
 }
@@ -584,7 +585,7 @@ body {
     gap: 10px;
     transition: 0.3s;
 }
-.flecha{color:  #fbbf24; }
+.flecha{color:  #20b2c2; }
 .arrow-container { animation: bounce 2s infinite; }
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
@@ -735,10 +736,10 @@ body {
 
 
 */
-.highlight-yellow { color: #c07e58 }
-.highlight-purple { color: #da34f0; }
-.highlight-green  { color: #00ffa3; }
-.highlight-orange { color: #ff8a00; }
+.highlight-yellow { color: #20b2c2 }
+.highlight-purple { color: #20b2c2; }
+.highlight-green  { color: #20b2c2; }
+.highlight-orange { color: #20b2c2; }
    /* tablet */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
  .work-section { padding: 100px 0; }
